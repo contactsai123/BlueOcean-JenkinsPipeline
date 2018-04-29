@@ -1,7 +1,7 @@
 pipeline {
   agent any
   libraries {
-    lib('')
+    lib('GroovyLib')
   }
   stages {
     stage('print message') {
