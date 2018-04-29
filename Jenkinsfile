@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('print message') {
       steps {
         echo "Hello ${MY_NAME}!"
       }
