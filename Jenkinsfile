@@ -14,6 +14,11 @@ pipeline {
         bat 'ipconfig'
       }
     }
+     stage('Shared Lib') {
+         steps {
+             helloWorld("Jenkins")
+         }
+      }
     stage('Deploy') {
       input {
         message 'Which Version?'
