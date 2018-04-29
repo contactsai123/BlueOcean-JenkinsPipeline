@@ -6,6 +6,17 @@ pipeline {
         echo "Hello ${MY_NAME} ${params.Name}!"
       }
     }
+    stage('Deploy') {
+      options {
+        timeout(time: 30, unit: 'SECONDS')
+      }
+      input {
+        message 'Should we continue?'
+      }
+      steps {
+        echo 'Continuing with deployment'
+      }
+    }
   }
   environment {
     MY_NAME = 'Sai'
